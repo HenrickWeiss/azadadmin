@@ -1,0 +1,143 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+button {
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Alle löschen Button */
+#deleteAllBtn {
+  background: red;
+  color: #fff;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+#deleteAllBtn:hover {
+  background: darkred;
+}
+
+/* Bestell-Container */
+.order {
+  background: #222;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+
+/* Statusfarben */
+.order.neu {
+  border-left: 6px solid orange;
+}
+
+.order.in\ Arbeit {
+  border-left: 6px solid yellow;
+}
+
+.order.fertig {
+  border-left: 6px solid limegreen;
+  opacity: 0.6;
+}
+
+/* Einzelne Buttons */
+.order button[data-status] {
+  background: #555;
+  color: #fff;
+}
+
+.order button[data-status="in Arbeit"] {
+  background: yellow;
+  color: #000;
+}
+
+.order button[data-status="fertig"] {
+  background: limegreen;
+  color: #000;
+}
+
+.order button[data-delete] {
+  background: red;
+  color: #fff;
+}
+
+.order button[data-delete]:hover {
+  background: darkred;
+}
+
+/* Listen in Bestellungen */
+.order ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.order ul li {
+  padding: 2px 0;
+}
+
+/* Login Formular */
+
+#loginContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+  left: 50%;
+  transform: translate(-5%,10px);
+  
+}
+#loginContainer input {
+  padding: 8px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background: #222;
+  color: #fff;
+}
+
+#loginContainer button {
+  display: flex;
+  flex-direction: column;
+  background: #555;
+  color: #fff;
+  width: 12.2%;
+}
+
+/* Mobile Anpassungen */
+@media (max-width: 600px) {
+  button {
+    font-size: 12px;
+    padding: 6px 10px;
+    margin-top: 5px;
+    margin-right: 5px;
+  }
+
+  .order {
+    padding: 10px;
+  }
+
+  #loginContainer input {
+    width: 150px;
+  }
+}
