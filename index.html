@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Azad Grill – Bestellungen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Azad Grill – Bestellungen</h1>
+
+  <!-- Toast -->
+  <div id="toast" style="display:none; position:fixed; bottom:20px; right:20px; background:#333; color:white; padding:10px 15px; border-radius:8px;"></div>
+
+  <!-- Login -->
+  <div id="loginContainer">
+    <p>Bitte melden Sie sich an:</p>
+    <input type="email" id="username" placeholder="E-Mail" autocomplete="username" />
+    <input type="password" id="password" placeholder="Passwort" autocomplete="current-password" />
+    <button id="loginBtn">Login</button>
+    <p id="loginError" style="color:red; display:none;">E-Mail oder Passwort falsch!</p>
+  </div>
+
+  <!-- Bestellungen -->
+  <div id="ordersContainer" style="display:none;">
+    <button id="logoutBtn" style="background:#555; color:#fff;">Logout</button>
+    <button id="deleteAllBtn">Alle Bestellungen löschen</button>
+    <div id="orders"></div>
+  </div>
+
+  <!-- Sound für neue Bestellung -->
+  <audio id="newOrderSound" src="ding.mp3" preload="auto"></audio>
+
+  <script type="module" src="index.js"></script>
+</body>
+</html>
